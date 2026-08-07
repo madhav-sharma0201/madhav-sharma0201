@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3800&pause=900&color=00D9FF&center=true&vCenter=true&width=820&lines=Hey+there!+I'm+Madhav+%F0%9F%91%8B;Go+%2B+Kubernetes+%2B+Cloud+Native+%E2%98%B8%EF%B8%8F;5+PRs+merged+into+CNCF+Kubescape+%F0%9F%9B%A1%EF%B8%8F;LLMOps%3A+fine-tune+%E2%86%92+serve+%E2%86%92+GitOps+%F0%9F%A4%96;I+chase+race+conditions+for+fun+%F0%9F%A7%AA" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3800&pause=900&color=00D9FF&center=true&vCenter=true&width=820&lines=Hey+there!+I'm+Madhav+%F0%9F%91%8B;Go+%2B+Kubernetes+%2B+Cloud+Native+%E2%98%B8%EF%B8%8F;Merged+upstream+into+CNCF+Kubescape+%F0%9F%9B%A1%EF%B8%8F;LLMOps%3A+fine-tune+%E2%86%92+serve+%E2%86%92+GitOps+%F0%9F%A4%96;I+chase+race+conditions+for+fun+%F0%9F%A7%AA" alt="Typing SVG" />
 </h3>
 
 <p align="center">
@@ -28,8 +28,8 @@
 
 ## 🧠 About Me
 
-- ☸️ I work on **Kubernetes security tooling** — currently contributing upstream to **[Kubescape](https://github.com/kubescape/kubescape)**, a CNCF project with **11.5k+ stars**
-- 🛡️ **5 PRs merged** into `kubescape/kubescape` — mostly on **failure boundaries**: turning `logger.Fatal` calls into returned errors so callers can actually branch on them
+- ☸️ I work on **Kubernetes security tooling** — currently contributing upstream to **[Kubescape](https://github.com/kubescape/kubescape)**, a CNCF project (live star count below)
+- 🛡️ **Merged upstream** into `kubescape/kubescape` — mostly on **failure boundaries**: turning `logger.Fatal` calls into returned errors so callers can actually branch on them (live count and full list below)
 - 🔬 Applying for the **LFX Mentorship** project on **multi-cluster fleet posture** — with a working Go spike and real scan output from 3 `kind` clusters behind it
 - 🤖 Also deep in **LLMOps**: fine-tuned Llama-3.2-3B with QLoRA, served it on **AWS EKS** via Terraform + ArgoCD
 - 🧪 The bugs I enjoy most are the boring-looking ones — stale API discovery caches, ports reported before they're bound, env vars leaking between tests
@@ -48,21 +48,25 @@
 
 ## 🛡️ Upstream Open Source — CNCF Kubescape
 
-> Real, reviewed, merged. Every row links to the diff.
+> Real, reviewed, merged. Every row links to the diff. **This table regenerates itself daily from the GitHub API** — it is never hand-maintained.
 
-| PR | What it fixed | Repo | Status |
+<!-- PRS:START -->
+| PR | Title | Repo | Status |
 |---|---|---|---|
-| [#2810](https://github.com/kubescape/kubescape/pull/2810) | Expose cluster connection failure as a **sentinel error** so callers can branch on it | `kubescape/kubescape` | ✅ Merged |
-| [#2788](https://github.com/kubescape/kubescape/pull/2788) | Return cluster connection failures from `Scan` **instead of terminating** the process | `kubescape/kubescape` | ✅ Merged |
-| [#2785](https://github.com/kubescape/kubescape/pull/2785) | Use `t.Setenv` so env vars are **restored between test runs** | `kubescape/kubescape` | ✅ Merged |
-| [#2783](https://github.com/kubescape/kubescape/pull/2783) | Repair `NewOPASessionObj` call broken by a bad merge | `kubescape/kubescape` | ✅ Merged |
-| [#2761](https://github.com/kubescape/kubescape/pull/2761) | Report the **actually-bound port** from `GetPortForwardLocalhost` | `kubescape/kubescape` | ✅ Merged |
-| [#160](https://github.com/kubescape/k8s-interface/pull/160) | Refresh **API discovery** for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
+| [#2810](https://github.com/kubescape/kubescape/pull/2810) | refactor(core): expose cluster connection failure as a sentinel error | `kubescape/kubescape` | ✅ Merged |
+| [#2788](https://github.com/kubescape/kubescape/pull/2788) | fix(core): return cluster connection failures from Scan instead of terminating | `kubescape/kubescape` | ✅ Merged |
+| [#2785](https://github.com/kubescape/kubescape/pull/2785) | test(cautils): use t.Setenv so env vars are restored between runs | `kubescape/kubescape` | ✅ Merged |
+| [#2783](https://github.com/kubescape/kubescape/pull/2783) | fix(resourcehandler): repair NewOPASessionObj call broken by merge | `kubescape/kubescape` | ✅ Merged |
+| [#2761](https://github.com/kubescape/kubescape/pull/2761) | fix(cautils): report the bound port from GetPortForwardLocalhost | `kubescape/kubescape` | ✅ Merged |
+| [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
+<!-- PRS:END -->
+
+**What these actually did:** [#2788](https://github.com/kubescape/kubescape/pull/2788) made `Kubescape.Scan` return an error for an unreachable cluster instead of calling `logger.Fatal`, and [#2810](https://github.com/kubescape/kubescape/pull/2810) exposed that as a **sentinel error** so a caller can branch on it. [#2761](https://github.com/kubescape/kubescape/pull/2761) fixed `GetPortForwardLocalhost` reporting a port before it was bound. [#160](https://github.com/kubescape/k8s-interface/pull/160) refreshes **API discovery** for a newly initialized live client — `InitializeMapResources` otherwise keeps the *first* cluster's discovery after you build a client for a second one.
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Merged%20PRs%20(all%20orgs)-15-2ea043?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3Amadhav-sharma0201%2Btype%3Apr%2Bis%3Amerged%2Bis%3Apublic&query=%24.total_count&label=Public%20Merged%20PRs&color=2ea043&style=for-the-badge&logo=git&logoColor=white" />
   <img src="https://img.shields.io/badge/CNCF%20Project-Kubescape-326CE5?style=for-the-badge&logo=cncf&logoColor=white" />
-  <img src="https://img.shields.io/badge/Upstream%20Stars-11.5k%2B-FFD700?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/github/stars/kubescape/kubescape?style=for-the-badge&label=Upstream%20Stars&color=FFD700&logo=github&logoColor=white" />
 </p>
 
 ---
@@ -105,7 +109,7 @@ Two findings from the real reports shaped the design: `passed` is effectively **
 ---
 
 ### 🏫 Graphura — School Management ERP *(Internship)*
-> Full-stack feature work on a production School ERP — **8 PRs merged**: academics reports & timetables, marks entry/marksheet/results, staff management, parent profiles & meetings, dropout and admission trend dashboards.
+> Full-stack feature work on a production School ERP — **8 PRs merged** *(private repo, so not publicly linkable)*: academics reports & timetables, marks entry/marksheet/results, staff management, parent profiles & meetings, dropout and admission trend dashboards.
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
