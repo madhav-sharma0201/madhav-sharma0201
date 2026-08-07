@@ -1,20 +1,20 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,40:326CE5,100:00D9FF&height=180&section=header&text=Madhav%20Sharma&fontSize=48&fontColor=FFFFFF&animation=fadeIn&fontAlignY=34&desc=Go%20%C2%B7%20Kubernetes%20%C2%B7%20Cloud%20Native%20%C2%B7%20LLMOps&descAlignY=55&descSize=16&font=JetBrains%20Mono"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,40:7C3AED,100:00D9FF&height=180&section=header&text=Madhav%20Sharma&fontSize=48&fontColor=FFFFFF&animation=fadeIn&fontAlignY=34&desc=Full-Stack%20Engineer%20%C2%B7%20AI%20%2F%20ML%20%C2%B7%20Cloud%20Native&descAlignY=55&descSize=16&font=JetBrains%20Mono"/>
 </div>
 
 <h3 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3800&pause=900&color=00D9FF&center=true&vCenter=true&width=820&lines=Hey+there!+I'm+Madhav+%F0%9F%91%8B;Go+%2B+Kubernetes+%2B+Cloud+Native+%E2%98%B8%EF%B8%8F;Merged+upstream+into+CNCF+Kubescape+%F0%9F%9B%A1%EF%B8%8F;LLMOps%3A+fine-tune+%E2%86%92+serve+%E2%86%92+GitOps+%F0%9F%A4%96;I+chase+race+conditions+for+fun+%F0%9F%A7%AA" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3800&pause=900&color=00D9FF&center=true&vCenter=true&width=880&lines=Hey+there!+I'm+Madhav+%F0%9F%91%8B;Full-Stack+Engineer+%E2%80%94+React+%C2%B7+Node+%C2%B7+Microservices+%F0%9F%92%BB;I+build+multi-agent+AI+systems+%F0%9F%A4%96;Fine-tune%2C+serve+and+ship+LLMs+%F0%9F%A7%A0;Merged+upstream+into+CNCF+Kubescape+%E2%98%B8%EF%B8%8F" alt="Typing SVG" />
 </h3>
 
 <p align="center">
   <a href="mailto:madhavsharma2023@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
+  <a href="https://github.com/madhav-sharma0201/falcon-ai">
+    <img src="https://img.shields.io/badge/Falcon%20AI-7C3AED?style=for-the-badge&logo=react&logoColor=white" alt="Falcon AI" />
+  </a>
   <a href="https://github.com/madhav-sharma0201?tab=repositories">
     <img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos" />
-  </a>
-  <a href="https://github.com/kubescape/kubescape/pulls?q=is%3Apr+author%3Amadhav-sharma0201">
-    <img src="https://img.shields.io/badge/CNCF%20Kubescape-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubescape contributions" />
   </a>
   <!-- Add your LinkedIn: replace YOUR-HANDLE below and delete these comment markers.
   <a href="https://www.linkedin.com/in/YOUR-HANDLE/">
@@ -28,65 +28,55 @@
 
 ## 🧠 About Me
 
-- ☸️ I work on **Kubernetes security tooling** — currently contributing upstream to **[Kubescape](https://github.com/kubescape/kubescape)**, a CNCF project (live star count below)
-- 🛡️ **Merged upstream** into `kubescape/kubescape` — mostly on **failure boundaries**: turning `logger.Fatal` calls into returned errors so callers can actually branch on them (live count and full list below)
-- 🔬 Applying for the **LFX Mentorship** project on **multi-cluster fleet posture** — with a working Go spike and real scan output from 3 `kind` clusters behind it
-- 🤖 Also deep in **LLMOps**: fine-tuned Llama-3.2-3B with QLoRA, served it on **AWS EKS** via Terraform + ArgoCD
-- 🧪 The bugs I enjoy most are the boring-looking ones — stale API discovery caches, ports reported before they're bound, env vars leaking between tests
+- 💻 **Full-stack engineer** — I build complete products: React 19 front-ends, Express microservice backends, MongoDB/Redis data layers, and the auth, billing and storage plumbing in between
+- 🤖 **AI/ML** — I build **multi-agent systems** on LangGraph, **RAG pipelines** over vector stores, and I **fine-tune and serve my own models** (QLoRA → FastAPI → Kubernetes)
+- 🦅 Currently building **[Falcon AI](https://github.com/madhav-sharma0201/falcon-ai)** — a LangGraph supervisor routing to 8 specialist agents across a 5-service backend, with RAG, S3 artifacts and metered credits
+- ☸️ Also contribute **upstream to [Kubescape](https://github.com/kubescape/kubescape)** (CNCF) — real merged PRs on failure boundaries and cluster connection handling
+- 🧪 The bugs I enjoy most are the boring-looking ones — race conditions, stale caches, ports reported before they're bound
 - 💡 I don't claim anything I can't link to a diff
 
 ---
 
 ## 🧰 Tech Stack
 
+<p align="center"><b>Frontend</b></p>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=go,kubernetes,docker,terraform,aws,linux,bash,git,github&theme=dark" /><br/>
-  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,redis,postgres,mongodb,nodejs,react,ts&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=react,redux,tailwind,vite,js,ts,html,css&theme=dark" />
 </p>
 
----
-
-## 🛡️ Upstream Open Source — CNCF Kubescape
-
-> Real, reviewed, merged. Every row links to the diff. **This table regenerates itself daily from the GitHub API** — it is never hand-maintained.
-
-<!-- PRS:START -->
-| PR | Title | Repo | Status |
-|---|---|---|---|
-| [#2810](https://github.com/kubescape/kubescape/pull/2810) | refactor(core): expose cluster connection failure as a sentinel error | `kubescape/kubescape` | ✅ Merged |
-| [#2788](https://github.com/kubescape/kubescape/pull/2788) | fix(core): return cluster connection failures from Scan instead of terminating | `kubescape/kubescape` | ✅ Merged |
-| [#2785](https://github.com/kubescape/kubescape/pull/2785) | test(cautils): use t.Setenv so env vars are restored between runs | `kubescape/kubescape` | ✅ Merged |
-| [#2783](https://github.com/kubescape/kubescape/pull/2783) | fix(resourcehandler): repair NewOPASessionObj call broken by merge | `kubescape/kubescape` | ✅ Merged |
-| [#2761](https://github.com/kubescape/kubescape/pull/2761) | fix(cautils): report the bound port from GetPortForwardLocalhost | `kubescape/kubescape` | ✅ Merged |
-| [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
-<!-- PRS:END -->
-
-**What these actually did:** [#2788](https://github.com/kubescape/kubescape/pull/2788) made `Kubescape.Scan` return an error for an unreachable cluster instead of calling `logger.Fatal`, and [#2810](https://github.com/kubescape/kubescape/pull/2810) exposed that as a **sentinel error** so a caller can branch on it. [#2761](https://github.com/kubescape/kubescape/pull/2761) fixed `GetPortForwardLocalhost` reporting a port before it was bound. [#160](https://github.com/kubescape/k8s-interface/pull/160) refreshes **API discovery** for a newly initialized live client — `InitializeMapResources` otherwise keeps the *first* cluster's discovery after you build a client for a second one.
-
+<p align="center"><b>Backend &amp; Data</b></p>
 <p align="center">
-  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3Amadhav-sharma0201%2Btype%3Apr%2Bis%3Amerged%2Bis%3Apublic&query=%24.total_count&label=Public%20Merged%20PRs&color=2ea043&style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/CNCF%20Project-Kubescape-326CE5?style=for-the-badge&logo=cncf&logoColor=white" />
-  <img src="https://img.shields.io/github/stars/kubescape/kubescape?style=for-the-badge&label=Upstream%20Stars&color=FFD700&logo=github&logoColor=white" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,redis,postgres,firebase,docker,nginx&theme=dark" />
+</p>
+
+<p align="center"><b>AI / ML &amp; Cloud</b></p>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,sklearn,aws,terraform,kubernetes,go&theme=dark" />
 </p>
 
 ---
 
 ## 🚀 Featured Projects
 
-### ☸️ kubescape-fleet-spike — [Repo](https://github.com/madhav-sharma0201/kubescape-fleet-spike)
-> Architectural spike in **Go** for **multi-cluster fleet posture aggregation**. Runs two ways: against a fake scanner for synthetic edge cases, and against **real `kubescape scan --format json` output** captured from three `kind` clusters. Race-tested, `go vet` clean.
+### 🦅 Falcon AI — [Repo](https://github.com/madhav-sharma0201/falcon-ai)
+> **A multi-agent AI platform on a LangGraph supervisor.** Eight specialist agents (chat, coding, search, vision, PDF-RAG, PDF gen, PPT gen, image gen) behind a routing graph, across a five-service backend.
 
-Two findings from the real reports shaped the design: `passed` is effectively **three-valued** (controls come back `passed` with `subStatus: irrelevant` and zero resources examined), and `clusterName` is **empty in every report** — so cluster identity has to be carried by the orchestrator, not read back out.
+The routing layer decides in three tiers, cheapest first: an explicit client override, then **deterministic file rules** (an image goes to `vision`, a PDF to `pdf_rag`), and only then an **LLM classifier** — so the common cases never pay for a classification round-trip. RAG runs over **Qdrant**, conversation memory is **cache-first through Redis** with a Mongo fallback, generated decks and PDFs land in **S3 behind presigned URLs**, and credits are **metered per agent** through a single owning service.
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
-![kind](https://img.shields.io/badge/kind-3-326CE5?style=flat&logo=kubernetes&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-race--tested-2ea043?style=flat&logo=go&logoColor=white)
+![React](https://img.shields.io/badge/React_19-61DAFB?style=flat&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express_5-000000?style=flat&logo=express&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat&logo=langchain&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat&logo=qdrant&logoColor=white)
+![AWS S3](https://img.shields.io/badge/AWS_S3-569A31?style=flat&logo=amazons3&logoColor=white)
+![Razorpay](https://img.shields.io/badge/Razorpay-0C2451?style=flat&logo=razorpay&logoColor=white)
 
 ---
 
 ### 🤖 Text-to-SQL LLMOps Pipeline — [Repo](https://github.com/madhav-sharma0201/sql-llmops-pipeline)
-> End-to-end **LLMOps** pipeline. Fine-tuned **Llama-3.2-3B** with **4-bit QLoRA (Unsloth)** on **78,577 DDL/query pairs** — training loss **3.05 → 0.50** in 60 steps while touching only **0.75% of parameters**. **97.8% SQL execution accuracy**, hallucinations under **2.5%**, quantized to **2.2 GB VRAM (NF4)**. Served through an async **FastAPI** microservice (~140 ms GPU latency) on **AWS EKS**, provisioned with **Terraform** and delivered by **ArgoCD** GitOps.
+> **Fine-tuned and shipped my own model end to end.** Llama-3.2-3B with **4-bit QLoRA (Unsloth)** on **78,577 DDL/query pairs** — training loss **3.05 → 0.50** in 60 steps while touching only **0.75% of parameters**. **97.8% SQL execution accuracy**, hallucinations under **2.5%**, quantized to **2.2 GB VRAM (NF4)**. Served as an async **FastAPI** microservice (~140 ms GPU latency) on **AWS EKS**, provisioned with **Terraform** and delivered by **ArgoCD** GitOps.
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/QLoRA_+_Unsloth-EE4C2C?style=flat&logo=pytorch&logoColor=white)
@@ -118,12 +108,44 @@ Two findings from the real reports shaped the design: `passed` is effectively **
 
 ---
 
+### ☸️ kubescape-fleet-spike — [Repo](https://github.com/madhav-sharma0201/kubescape-fleet-spike)
+> Architectural spike in **Go** for **multi-cluster fleet posture aggregation**, validated against real scan output captured from three `kind` clusters. Race-tested, `go vet` clean.
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-race--tested-2ea043?style=flat&logo=go&logoColor=white)
+
+---
+
 ### 🎤 TEDxSGNS Youth — [Repo](https://github.com/madhav-sharma0201/TEDxSite)
 > Responsive event site for **TEDxSGNS Youth**, built with React + Vite.
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+---
+
+## 🌍 Open Source — CNCF Kubescape
+
+> Alongside product work, I contribute upstream. **This table regenerates itself daily from the GitHub API** — it is never hand-maintained.
+
+<!-- PRS:START -->
+| PR | Title | Repo | Status |
+|---|---|---|---|
+| [#2810](https://github.com/kubescape/kubescape/pull/2810) | refactor(core): expose cluster connection failure as a sentinel error | `kubescape/kubescape` | ✅ Merged |
+| [#2788](https://github.com/kubescape/kubescape/pull/2788) | fix(core): return cluster connection failures from Scan instead of terminating | `kubescape/kubescape` | ✅ Merged |
+| [#2785](https://github.com/kubescape/kubescape/pull/2785) | test(cautils): use t.Setenv so env vars are restored between runs | `kubescape/kubescape` | ✅ Merged |
+| [#2783](https://github.com/kubescape/kubescape/pull/2783) | fix(resourcehandler): repair NewOPASessionObj call broken by merge | `kubescape/kubescape` | ✅ Merged |
+| [#2761](https://github.com/kubescape/kubescape/pull/2761) | fix(cautils): report the bound port from GetPortForwardLocalhost | `kubescape/kubescape` | ✅ Merged |
+| [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
+<!-- PRS:END -->
+
+<p align="center">
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3Amadhav-sharma0201%2Btype%3Apr%2Bis%3Amerged%2Bis%3Apublic&query=%24.total_count&label=Public%20Merged%20PRs&color=2ea043&style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/CNCF%20Project-Kubescape-326CE5?style=for-the-badge&logo=cncf&logoColor=white" />
+  <img src="https://img.shields.io/github/stars/kubescape/kubescape?style=for-the-badge&label=Upstream%20Stars&color=FFD700&logo=github&logoColor=white" />
+</p>
 
 ---
 
@@ -165,7 +187,7 @@ Two findings from the real reports shaped the design: `passed` is effectively **
 
 ### 💬 Currently
 
-**Building** a multi-cluster fleet posture model for Kubescape · **Reading** the k8s discovery client internals · **Open to** LFX mentorship and cloud-native collaboration
+**Building** Falcon AI — multi-agent orchestration at product scale · **Exploring** agent evaluation and retrieval quality · **Open to** full-stack and AI/ML roles and collaboration
 
 <br/>
 
@@ -181,5 +203,5 @@ Two findings from the real reports shaped the design: `passed` is effectively **
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,60:326CE5,100:0D1117&height=120&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,60:7C3AED,100:0D1117&height=120&section=footer"/>
 </div>
