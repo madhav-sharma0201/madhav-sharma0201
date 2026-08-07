@@ -1,0 +1,181 @@
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,40:326CE5,100:00D9FF&height=180&section=header&text=Madhav%20Sharma&fontSize=48&fontColor=FFFFFF&animation=fadeIn&fontAlignY=34&desc=Go%20%C2%B7%20Kubernetes%20%C2%B7%20Cloud%20Native%20%C2%B7%20LLMOps&descAlignY=55&descSize=16&font=JetBrains%20Mono"/>
+</div>
+
+<h3 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&duration=3800&pause=900&color=00D9FF&center=true&vCenter=true&width=820&lines=Hey+there!+I'm+Madhav+%F0%9F%91%8B;Go+%2B+Kubernetes+%2B+Cloud+Native+%E2%98%B8%EF%B8%8F;5+PRs+merged+into+CNCF+Kubescape+%F0%9F%9B%A1%EF%B8%8F;LLMOps%3A+fine-tune+%E2%86%92+serve+%E2%86%92+GitOps+%F0%9F%A4%96;I+chase+race+conditions+for+fun+%F0%9F%A7%AA" alt="Typing SVG" />
+</h3>
+
+<p align="center">
+  <a href="mailto:madhavsharma2023@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+  </a>
+  <a href="https://github.com/madhav-sharma0201?tab=repositories">
+    <img src="https://img.shields.io/badge/Repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos" />
+  </a>
+  <a href="https://github.com/kubescape/kubescape/pulls?q=is%3Apr+author%3Amadhav-sharma0201">
+    <img src="https://img.shields.io/badge/CNCF%20Kubescape-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubescape contributions" />
+  </a>
+  <!-- Add your LinkedIn: replace YOUR-HANDLE below and delete these comment markers.
+  <a href="https://www.linkedin.com/in/YOUR-HANDLE/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  -->
+  <img src="https://komarev.com/ghpvc/?username=madhav-sharma0201&label=Profile+Views&color=00d9ff&style=for-the-badge" alt="Profile Views" />
+</p>
+
+---
+
+## 🧠 About Me
+
+- ☸️ I work on **Kubernetes security tooling** — currently contributing upstream to **[Kubescape](https://github.com/kubescape/kubescape)**, a CNCF project with **11.5k+ stars**
+- 🛡️ **5 PRs merged** into `kubescape/kubescape` — mostly on **failure boundaries**: turning `logger.Fatal` calls into returned errors so callers can actually branch on them
+- 🔬 Applying for the **LFX Mentorship** project on **multi-cluster fleet posture** — with a working Go spike and real scan output from 3 `kind` clusters behind it
+- 🤖 Also deep in **LLMOps**: fine-tuned Llama-3.2-3B with QLoRA, served it on **AWS EKS** via Terraform + ArgoCD
+- 🧪 The bugs I enjoy most are the boring-looking ones — stale API discovery caches, ports reported before they're bound, env vars leaking between tests
+- 💡 I don't claim anything I can't link to a diff
+
+---
+
+## 🧰 Tech Stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=go,kubernetes,docker,terraform,aws,linux,bash,git,github&theme=dark" /><br/>
+  <img src="https://skillicons.dev/icons?i=python,pytorch,fastapi,redis,postgres,mongodb,nodejs,react,ts&theme=dark" />
+</p>
+
+---
+
+## 🛡️ Upstream Open Source — CNCF Kubescape
+
+> Real, reviewed, merged. Every row links to the diff.
+
+| PR | What it fixed | Repo | Status |
+|---|---|---|---|
+| [#2810](https://github.com/kubescape/kubescape/pull/2810) | Expose cluster connection failure as a **sentinel error** so callers can branch on it | `kubescape/kubescape` | ✅ Merged |
+| [#2788](https://github.com/kubescape/kubescape/pull/2788) | Return cluster connection failures from `Scan` **instead of terminating** the process | `kubescape/kubescape` | ✅ Merged |
+| [#2785](https://github.com/kubescape/kubescape/pull/2785) | Use `t.Setenv` so env vars are **restored between test runs** | `kubescape/kubescape` | ✅ Merged |
+| [#2783](https://github.com/kubescape/kubescape/pull/2783) | Repair `NewOPASessionObj` call broken by a bad merge | `kubescape/kubescape` | ✅ Merged |
+| [#2761](https://github.com/kubescape/kubescape/pull/2761) | Report the **actually-bound port** from `GetPortForwardLocalhost` | `kubescape/kubescape` | ✅ Merged |
+| [#160](https://github.com/kubescape/k8s-interface/pull/160) | Refresh **API discovery** for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Merged%20PRs%20(all%20orgs)-15-2ea043?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/CNCF%20Project-Kubescape-326CE5?style=for-the-badge&logo=cncf&logoColor=white" />
+  <img src="https://img.shields.io/badge/Upstream%20Stars-11.5k%2B-FFD700?style=for-the-badge&logo=github&logoColor=white" />
+</p>
+
+---
+
+## 🚀 Featured Projects
+
+### ☸️ kubescape-fleet-spike — [Repo](https://github.com/madhav-sharma0201/kubescape-fleet-spike)
+> Architectural spike in **Go** for **multi-cluster fleet posture aggregation**. Runs two ways: against a fake scanner for synthetic edge cases, and against **real `kubescape scan --format json` output** captured from three `kind` clusters. Race-tested, `go vet` clean.
+
+Two findings from the real reports shaped the design: `passed` is effectively **three-valued** (controls come back `passed` with `subStatus: irrelevant` and zero resources examined), and `clusterName` is **empty in every report** — so cluster identity has to be carried by the orchestrator, not read back out.
+
+![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![kind](https://img.shields.io/badge/kind-3-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-race--tested-2ea043?style=flat&logo=go&logoColor=white)
+
+---
+
+### 🤖 Text-to-SQL LLMOps Pipeline — [Repo](https://github.com/madhav-sharma0201/sql-llmops-pipeline)
+> End-to-end **LLMOps** pipeline. Fine-tuned **Llama-3.2-3B** with **4-bit QLoRA (Unsloth)** on **78,577 DDL/query pairs** — training loss **3.05 → 0.50** in 60 steps while touching only **0.75% of parameters**. **97.8% SQL execution accuracy**, hallucinations under **2.5%**, quantized to **2.2 GB VRAM (NF4)**. Served through an async **FastAPI** microservice (~140 ms GPU latency) on **AWS EKS**, provisioned with **Terraform** and delivered by **ArgoCD** GitOps.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/QLoRA_+_Unsloth-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
+![AWS EKS](https://img.shields.io/badge/AWS_EKS-FF9900?style=flat&logo=amazonwebservices&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-EF7B4D?style=flat&logo=argo&logoColor=white)
+
+---
+
+### ⚡ Distributed Rate Limiter — [Repo](https://github.com/madhav-sharma0201/ratelimiter)
+> **Token bucket** rate limiter proving **shared state and atomicity across 3 stateless backends**. The naive read-then-write is a race; the fix pushes refill, capacity check, and deduction into a single **atomic Redis Lua script**. Hit "Burst" on the dashboard to fire 20 concurrent requests across all three instances and watch one shared limit hold exactly.
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis_Lua_EVAL-DC382D?style=flat&logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+
+---
+
+### 🏫 Graphura — School Management ERP *(Internship)*
+> Full-stack feature work on a production School ERP — **8 PRs merged**: academics reports & timetables, marks entry/marksheet/results, staff management, parent profiles & meetings, dropout and admission trend dashboards.
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
+
+---
+
+### 🎤 TEDxSGNS Youth — [Repo](https://github.com/madhav-sharma0201/TEDxSite)
+> Responsive event site for **TEDxSGNS Youth**, built with React + Vite.
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=madhav-sharma0201&theme=tokyonight" width="98%" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=madhav-sharma0201&theme=tokyonight" height="200" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=madhav-sharma0201&theme=tokyonight" height="200" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=madhav-sharma0201&theme=tokyonight&utcOffset=5.5" height="200" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=madhav-sharma0201&theme=tokyonight&hide_border=true" height="180" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=madhav-sharma0201&theme=tokyo-night&hide_border=true&area=true&custom_title=Contribution%20Graph" width="98%" />
+</p>
+
+---
+
+## 🐍 Watch the contributions get eaten
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madhav-sharma0201/madhav-sharma0201/output/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madhav-sharma0201/madhav-sharma0201/output/snake.svg" />
+    <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/madhav-sharma0201/madhav-sharma0201/output/snake.svg" width="98%" />
+  </picture>
+</div>
+
+---
+
+<div align="center">
+
+### 💬 Currently
+
+**Building** a multi-cluster fleet posture model for Kubescape · **Reading** the k8s discovery client internals · **Open to** LFX mentorship and cloud-native collaboration
+
+<br/>
+
+> *"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."*
+> — Martin Fowler
+
+<br/>
+
+<a href="mailto:madhavsharma2023@gmail.com">
+  <img src="https://img.shields.io/badge/Let's%20build%20something-00D9FF?style=for-the-badge&logo=minutemailer&logoColor=black" />
+</a>
+
+</div>
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,60:326CE5,100:0D1117&height=120&section=footer"/>
+</div>
