@@ -138,7 +138,7 @@ The routing layer decides in three tiers, cheapest first: an explicit client ove
 | [#2785](https://github.com/kubescape/kubescape/pull/2785) | test(cautils): use t.Setenv so env vars are restored between runs | `kubescape/kubescape` | ✅ Merged |
 | [#2783](https://github.com/kubescape/kubescape/pull/2783) | fix(resourcehandler): repair NewOPASessionObj call broken by merge | `kubescape/kubescape` | ✅ Merged |
 | [#2761](https://github.com/kubescape/kubescape/pull/2761) | fix(cautils): report the bound port from GetPortForwardLocalhost | `kubescape/kubescape` | ✅ Merged |
-| [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | 🔄 Open |
+| [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | ✅ Merged |
 <!-- PRS:END -->
 
 <p align="center">
