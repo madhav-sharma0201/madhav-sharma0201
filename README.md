@@ -133,6 +133,7 @@ The routing layer decides in three tiers, cheapest first: an explicit client ove
 <!-- PRS:START -->
 | PR | Title | Repo | Status |
 |---|---|---|---|
+| [#2898](https://github.com/kubescape/kubescape/pull/2898) | fix(printer): label the report with the context the scan actually used | `kubescape/kubescape` | ✅ Merged |
 | [#2810](https://github.com/kubescape/kubescape/pull/2810) | refactor(core): expose cluster connection failure as a sentinel error | `kubescape/kubescape` | ✅ Merged |
 | [#2788](https://github.com/kubescape/kubescape/pull/2788) | fix(core): return cluster connection failures from Scan instead of terminating | `kubescape/kubescape` | ✅ Merged |
 | [#2785](https://github.com/kubescape/kubescape/pull/2785) | test(cautils): use t.Setenv so env vars are restored between runs | `kubescape/kubescape` | ✅ Merged |
