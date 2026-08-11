@@ -111,6 +111,8 @@ The routing layer decides in three tiers, cheapest first: an explicit client ove
 ### ☸️ kubescape-fleet-spike — [Repo](https://github.com/madhav-sharma0201/kubescape-fleet-spike)
 > Architectural spike in **Go** for **multi-cluster fleet posture aggregation**, validated against real scan output captured from three `kind` clusters. Race-tested, `go vet` clean.
 
+Building this is how I found the upstream bug: aggregating reports from three clusters only works if each one says which cluster it came from, and `clusterName` was empty in all of them. That became issue [#2856](https://github.com/kubescape/kubescape/issues/2856) and, eventually, [#2898](https://github.com/kubescape/kubescape/pull/2898).
+
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-race--tested-2ea043?style=flat&logo=go&logoColor=white)
@@ -141,6 +143,10 @@ The routing layer decides in three tiers, cheapest first: an explicit client ove
 | [#2761](https://github.com/kubescape/kubescape/pull/2761) | fix(cautils): report the bound port from GetPortForwardLocalhost | `kubescape/kubescape` | ✅ Merged |
 | [#160](https://github.com/kubescape/k8s-interface/pull/160) | fix(k8sinterface): refresh API discovery for a newly initialized live client | `kubescape/k8s-interface` | ✅ Merged |
 <!-- PRS:END -->
+
+**The one I'd point at — [#2898](https://github.com/kubescape/kubescape/pull/2898).** While building my fleet-posture spike I noticed `clusterName` came back empty in every scan report, so I filed [#2856](https://github.com/kubescape/kubescape/issues/2856). Someone fixed it — but that fix landed **22 minutes after** a separate PR changed where the scan's context name comes from, and the two disagreed. Point `--kubeconfig` at a file whose current-context differs from the ambient one, and the report gets labelled with the *ambient* cluster while the scan actually ran against the *selected* one. That's worse than the empty field it replaced: an empty `clusterName` is obviously unusable, a wrong one looks authoritative — and anyone scanning several contexts in CI would mis-attribute their results. #2898 makes the label follow the scan.
+
+The rest cluster on **failure boundaries**: [#2788](https://github.com/kubescape/kubescape/pull/2788) made `Kubescape.Scan` return an error for an unreachable cluster instead of calling `logger.Fatal`, [#2810](https://github.com/kubescape/kubescape/pull/2810) exposed that as a **sentinel error** so callers can branch on it, and [#160](https://github.com/kubescape/k8s-interface/pull/160) refreshes **API discovery** for a newly initialized live client — `InitializeMapResources` otherwise keeps the *first* cluster's discovery after you build a client for a second one.
 
 <p align="center">
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3Amadhav-sharma0201%2Btype%3Apr%2Bis%3Amerged%2Bis%3Apublic&query=%24.total_count&label=Public%20Merged%20PRs&color=2ea043&style=for-the-badge&logo=git&logoColor=white" />
